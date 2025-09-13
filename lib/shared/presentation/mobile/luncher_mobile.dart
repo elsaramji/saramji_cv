@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:saramji_cv/core/themes/fonts/font_style.dart';
 import 'package:saramji_cv/core/themes/theme_light.dart';
+import 'package:saramji_cv/features/home/presentation/mobile/view/home_mobile.dart';
 
 class LuncherMobile extends StatelessWidget {
   const LuncherMobile({super.key});
@@ -10,18 +9,14 @@ class LuncherMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: Size(
+        MediaQuery.of(context).size.width,
+        MediaQuery.of(context).size.height,
+      ),
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
-        home: Scaffold(
-          body: Center(
-            child: Text(
-              "Mobile version",
-              style: AppTextStyles.poppinsBold20,
-            ),
-          ),
-        ),
+        home: HomeMobile(),
       ),
     );
   }

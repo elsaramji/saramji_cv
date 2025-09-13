@@ -20,7 +20,7 @@ class AppTheme {
       style: ElevatedButton.styleFrom(
         backgroundColor: primaryColor,
         foregroundColor: scaffoldBackgroundColor,
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 21.h),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)),
         elevation: 0,
         textStyle: AppTextStyles.poppinsMedium11.copyWith(
@@ -33,7 +33,7 @@ class AppTheme {
         side: BorderSide(color: primaryColor, width: 1.w),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)),
         foregroundColor: scaffoldBackgroundColor,
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 21.h),
         elevation: 0,
         textStyle: AppTextStyles.poppinsMedium11.copyWith(
           color: scaffoldBackgroundColor,

@@ -1,27 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:saramji_cv/core/themes/colors/app_colors.dart';
 
 class AppTextStyles {
   // poppins Regular
-  static TextStyle poppinsRegular(double size, {Color? color}) => GoogleFonts.poppins(
+  static TextStyle poppinsRegular(double size, {Color? color}) =>
+      GoogleFonts.poppins(
         fontSize: size.sp,
         fontWeight: FontWeight.w400,
-        color: color ?? Colors.black,
+        color: color ?? AppColors.primaryText,
       );
 
   // poppins Medium
-  static TextStyle poppinsMedium(double size, {Color? color}) => GoogleFonts.poppins(
+  static TextStyle poppinsMedium(double size, {Color? color}) =>
+      GoogleFonts.poppins(
         fontSize: size.sp,
         fontWeight: FontWeight.w500,
-        color: color ?? Colors.black,
+        color: color ?? AppColors.primaryText,
       );
 
   // poppins Bold
-  static TextStyle poppinsBold(double size, {Color? color}) => GoogleFonts.poppins(
+  static TextStyle poppinsBold(double size, {Color? color}) =>
+      GoogleFonts.poppins(
         fontSize: size.sp,
         fontWeight: FontWeight.w700,
-        color: color ?? Colors.black,
+        color: color ?? AppColors.primaryText,
       );
 
   // Examples: Regular
@@ -66,6 +70,3 @@ class AppTextStyles {
   static final poppinsBold40 = poppinsBold(40);
   static final poppinsBold48 = poppinsBold(48);
 }
-
-
-

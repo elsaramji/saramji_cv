@@ -9,7 +9,7 @@ class Luncher extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
-      breakpoints: ScreenBreakpoints(desktop: 1024, tablet: 900, watch: 0),
+      breakpoints: ScreenBreakpoints(desktop: 1240, tablet: 720, watch: 0),
       mobile: (context) => LuncherMobile(),
       tablet: (context) => LuncherWeb(),
       desktop: (context) => LuncherWeb(),
