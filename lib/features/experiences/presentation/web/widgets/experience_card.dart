@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saramji_cv/core/themes/colors/app_colors.dart';
@@ -23,7 +22,7 @@ class ExperiencesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 16.h),
-      height: 226.h,
+      height: 282.h,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -42,20 +41,22 @@ class ExperiencesCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(title, style: AppTextStyles.poppinsBold16),
-                  Text(
-                    company,
-                    style: AppTextStyles.poppinsRegular12.copyWith(
-                      color: AppColors.primary,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(title, style: AppTextStyles.poppinsBold16),
+                    Text(
+                      company,
+                      style: AppTextStyles.poppinsRegular12.copyWith(
+                        color: AppColors.primary,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Spacer(),
-              Text(period, style: AppTextStyles.poppinsRegular12),
+              Text(period, style: AppTextStyles.poppinsMedium12),
             ],
           ),
           Text(description, style: AppTextStyles.poppinsRegular16),

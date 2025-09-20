@@ -1,15 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saramji_cv/core/themes/fonts/font_style.dart';
 import 'package:saramji_cv/features/about/presentation/web/widgets/marker.dart';
 
 class AboutSlideContant extends StatelessWidget {
-  final String aboutMe ;
-  final String summary ;
-  const AboutSlideContant({
-    super.key, required this.aboutMe, required this.summary,
-  });
+  final String summary;
+  const AboutSlideContant({super.key, required this.summary});
 
   @override
   Widget build(BuildContext context) {
@@ -18,54 +14,62 @@ class AboutSlideContant extends StatelessWidget {
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           physics: ScrollPhysics(),
-                
+
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             spacing: 32.h,
             children: [
-              Text(
-                aboutMe,
-                style: AppTextStyles.poppinsRegular16,
-                textAlign: TextAlign.center,
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 32.w),
+                child: Text(
+                  summary,
+                  style: AppTextStyles.poppinsRegular18,
+                  textAlign: TextAlign.center,
+                ),
               ),
-          
-              Text(
-                summary,
-                style: AppTextStyles.poppinsRegular16,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 16.h),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 physics: ScrollPhysics(),
                 child: Row(
                   spacing: 32.w,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                  
+
                   children: [
                     Marker(
                       child: MarkerContant(
                         text: "Mobile Development",
-                        image: "assets/icons/mobile-development.png",
+                        image: "assets/icons/phone.png",
+                      ),
+                    ),
+                    Marker(
+                      child: MarkerContant(
+                        text: "Paletform Development",
+                        image: "assets/icons/code.png",
+                      ),
+                    ),
+
+                    Marker(
+                      child: MarkerContant(
+                        text: "Backend & Database",
+                        image: "assets/icons/db.png",
                       ),
                     ),
                     Marker(
                       child: MarkerContant(
                         text: "Clean Architecture",
-                        image: "assets/icons/code.png",
+                        image: "assets/icons/arch.png",
                       ),
                     ),
-                                  
+
                     Marker(
                       child: MarkerContant(
-                        text: "CI/CD",
-                        image: "assets/icons/Ci&CD.png",
+                        text: "DevOps & Tools",
+                        image: "assets/icons/connect.png",
                       ),
                     ),
                   ],
                 ),
               ),
-          
             ],
           ),
         ),

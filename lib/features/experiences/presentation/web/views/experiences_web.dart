@@ -6,6 +6,7 @@ import 'package:saramji_cv/shared/presentation/web/widgets/header_line.dart';
 import 'package:saramji_cv/shared/presentation/web/widgets/header_title.dart';
 
 class ExperiencesWeb extends StatelessWidget {
+  static const index = 2;
   const ExperiencesWeb({super.key});
 
   @override

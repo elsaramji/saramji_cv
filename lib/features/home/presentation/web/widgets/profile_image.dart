@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:saramji_cv/core/helper/values/personal_values.dart';
 
 class ProfileImage extends StatelessWidget {
   const ProfileImage({super.key});
@@ -9,7 +10,7 @@ class ProfileImage extends StatelessWidget {
     return CircleAvatar(
       radius: 84.r,
       backgroundImage: NetworkImage(
-        "https://avatars.githubusercontent.com/u/90051301?v=4",
+        PersonalValues.personalImage,
       ),
     );
   }

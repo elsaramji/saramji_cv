@@ -15,7 +15,13 @@ class AppTheme {
       secondary: secondaryColor,
       error: Colors.redAccent,
     ),
-
+    appBarTheme: AppBarTheme(
+      backgroundColor: scaffoldBackgroundColor,
+      foregroundColor: scaffoldBackgroundColor,
+      scrolledUnderElevation: 0,
+      
+      elevation: 0,
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: primaryColor,

@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:saramji_cv/features/home/presentation/web/widgets/home_app_bar.dart';
 import 'package:saramji_cv/features/home/presentation/web/widgets/home_linear.dart';
 import 'package:saramji_cv/features/home/presentation/web/widgets/profile_slide.dart';
 
 class HomeWeb extends StatelessWidget {
-  const HomeWeb({super.key});
+  final PageController controller;
+  static const int index = 0;
+  const HomeWeb({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBarWeb(),
-      body: Stack(
+    return  Stack(
         children: [
           // background
           Positioned.fill(child: HomeLinear()),
           // profile slide
-          Positioned.fill(child: ProfileSlide()),
+          Positioned.fill(child: ProfileSlide(controller: controller)),
         ],
-      ),
+      
     );
   }
 }

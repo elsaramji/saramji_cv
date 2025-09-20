@@ -12,7 +12,7 @@ class MarkerContant extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(image, width: 32.sp, height: 32.sp),
+        Image.asset(image, width: 34.sp, height: 34.sp, fit: BoxFit.contain),
         SizedBox(width: 8.w),
         Text(
           text,

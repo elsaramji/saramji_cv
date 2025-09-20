@@ -5,34 +5,31 @@ import 'package:saramji_cv/shared/presentation/web/widgets/header_line.dart';
 import 'package:saramji_cv/shared/presentation/web/widgets/header_title.dart';
 
 class ContactWeb extends StatelessWidget {
+  static const index = 5;
   const ContactWeb({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 92.w, vertical: 18.h),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          spacing: 16.h,
-          children: [
-            HeaderTitel(title: "Get In Touch"),
-            HeaderLine(),
-            Expanded(
-              child: Center(
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  physics: ScrollPhysics(),
-                  child: ContactSlideWeb(),
-                ),
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 92.w, vertical: 18.h),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        spacing: 16.h,
+        children: [
+          HeaderTitel(title: "Get In Touch"),
+          HeaderLine(),
+          Expanded(
+            child: Center(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                physics: ScrollPhysics(),
+                child: ContactSlideWeb(),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 }
-
-

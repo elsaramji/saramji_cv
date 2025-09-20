@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html>
+<style>
+  #splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #splash-screen img {
+    width: 512px;
+    height: 512px;
+    margin-bottom: 20px;
+  }
+</style>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -27,12 +48,26 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>saramji_cv</title>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
+  <!-- Splash Screen -->
+  <div id="splash-screen">
+    <img src="web/icons/Icon-maskable-512.png" alt="logo" />
+  </div>
+
+  <!-- Flutter app -->
+  <script src="flutter.js" defer></script>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      document.getElementById('splash-screen')?.remove();
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
+
 </html>

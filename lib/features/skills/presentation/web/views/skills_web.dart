@@ -6,6 +6,7 @@ import 'package:saramji_cv/shared/presentation/web/widgets/header_line.dart';
 import 'package:saramji_cv/shared/presentation/web/widgets/header_title.dart';
 
 class SkillsWeb extends StatelessWidget {
+  static const index = 4;
   const SkillsWeb({super.key});
 
   @override
@@ -71,4 +72,3 @@ class SkillsWeb extends StatelessWidget {
     );
   }
 }
-
