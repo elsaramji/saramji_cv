@@ -1,9 +1,6 @@
 # 💼 Portfolio App – Showcasing My Work & Skills as a Flutter Developer
 
 **Status:** Demo – 2025
-**Repository:** [github.com/elsaramji/portfolio_app](https://github.com/elsaramji/portfoilosr)
-**Live Demo:** Coming Soon!
-
 ---
 
 ## 📱 Overview
