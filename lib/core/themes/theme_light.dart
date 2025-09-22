@@ -19,7 +19,8 @@ class AppTheme {
       backgroundColor: scaffoldBackgroundColor,
       foregroundColor: scaffoldBackgroundColor,
       scrolledUnderElevation: 0,
-      
+      iconTheme: IconThemeData(color: AppColors.primaryText),
+
       elevation: 0,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saramji_cv/core/themes/colors/app_colors.dart';
-import 'package:saramji_cv/features/experiences/presentation/web/widgets/experience_slide.dart';
+import 'package:saramji_cv/features/experiences/presentation/web/widgets/experience_slide_web.dart';
 import 'package:saramji_cv/shared/presentation/web/widgets/header_line.dart';
 import 'package:saramji_cv/shared/presentation/web/widgets/header_title.dart';
 
@@ -22,7 +22,7 @@ class ExperiencesWeb extends StatelessWidget {
           children: [
             HeaderTitel(title: "Experiences"),
             HeaderLine(),
-            ExperiencesSlide(),
+            ExperiencesSlideWeb(),
           ],
         ),
       ),

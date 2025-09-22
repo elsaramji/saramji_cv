@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:saramji_cv/features/contact/presentation/mobile/contact_mobile_slide.dart';
 import 'package:saramji_cv/features/contact/presentation/web/widgets/contact_web_slide.dart';
 import 'package:saramji_cv/shared/presentation/web/widgets/header_line.dart';
 import 'package:saramji_cv/shared/presentation/web/widgets/header_title.dart';

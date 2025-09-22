@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:saramji_cv/features/home/presentation/web/widgets/home_linear.dart';
-import 'package:saramji_cv/features/home/presentation/web/widgets/profile_slide.dart';
+import 'package:saramji_cv/features/home/presentation/mobile/widgets/profile_slide_mobile.dart';
+import 'package:saramji_cv/features/home/presentation/widgets/home_linear.dart';
 
 class HomeMobile extends StatelessWidget {
-  final PageController controller=PageController();
-  HomeMobile({super.key});
+  final PageController controller;
+  const HomeMobile({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class HomeMobile extends StatelessWidget {
       body: Stack(
         children: [
           Positioned.fill(child: HomeLinear()),
-          Positioned.fill(child: ProfileSlide(controller: controller,)),
+          Positioned.fill(child: ProfileSlideMobile(controller: controller)),
         ],
       ),
     );

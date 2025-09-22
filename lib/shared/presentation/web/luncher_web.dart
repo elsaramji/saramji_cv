@@ -8,6 +8,7 @@ import 'package:saramji_cv/features/home/presentation/web/views/home_web.dart';
 import 'package:saramji_cv/shared/presentation/web/widgets/app_bar.dart';
 import 'package:saramji_cv/features/projects/presentation/web/views/projects_web.dart';
 import 'package:saramji_cv/features/skills/presentation/web/views/skills_web.dart';
+import 'package:saramji_cv/shared/presentation/widgets/page_controlls.dart';
 
 class LuncherWeb extends StatefulWidget {
   const LuncherWeb({super.key});
@@ -34,34 +35,7 @@ class _LuncherWebState extends State<LuncherWeb> {
         theme: AppTheme.lightTheme,
         home: Scaffold(
           appBar: AppBarWeb(pageController: pageController),
-          floatingActionButton: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            spacing: 16.h,
-            children: [
-              FloatingActionButton(
-                onPressed: () {
-                  if (pageController.page != 0.0) {
-                    pageController.previousPage(
-                      duration: Duration(seconds: 1),
-                      curve: Curves.linear,
-                    );
-                  }
-                },
-                child: Icon(Icons.arrow_upward),
-              ),
-              FloatingActionButton(
-                onPressed: () {
-                  if (pageController.page != 5.0) {
-                    pageController.nextPage(
-                      duration: Duration(seconds: 1),
-                      curve: Curves.linear,
-                    );
-                  }
-                },
-                child: Icon(Icons.arrow_downward),
-              ),
-            ],
-          ),
+          floatingActionButton: PagesControlls(pageController: pageController),
           body: PageView(
             controller: pageController,
             scrollDirection: Axis.vertical,
@@ -80,3 +54,4 @@ class _LuncherWebState extends State<LuncherWeb> {
     );
   }
 }
+

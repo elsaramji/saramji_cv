@@ -3,13 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saramji_cv/core/themes/colors/app_colors.dart';
 import 'package:saramji_cv/core/themes/fonts/font_style.dart';
 
-class ExperiencesCardWeb extends StatelessWidget {
+class ExperiencesCardMobile extends StatelessWidget {
   final String title;
   final String period;
   final String company;
   final String description;
   final List<Widget> technologies;
-  const ExperiencesCardWeb({
+  const ExperiencesCardMobile({
     super.key,
     required this.title,
     required this.period,
@@ -22,7 +22,7 @@ class ExperiencesCardWeb extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 16.h),
-      height: 282.h,
+      height: 198.h,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -45,10 +45,10 @@ class ExperiencesCardWeb extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title, style: AppTextStyles.poppinsBold16),
+                    Text(title, style: AppTextStyles.poppinsBold12),
                     Text(
                       company,
-                      style: AppTextStyles.poppinsRegular12.copyWith(
+                      style: AppTextStyles.poppinsRegular11.copyWith(
                         color: AppColors.primary,
                       ),
                     ),
@@ -56,10 +56,10 @@ class ExperiencesCardWeb extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              Text(period, style: AppTextStyles.poppinsMedium12),
+              Text(period, style: AppTextStyles.poppinsMedium11),
             ],
           ),
-          Text(description, style: AppTextStyles.poppinsRegular16),
+          Text(description, style: AppTextStyles.poppinsRegular12),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.start,

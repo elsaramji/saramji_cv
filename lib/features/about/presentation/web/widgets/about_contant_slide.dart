@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saramji_cv/core/themes/fonts/font_style.dart';
-import 'package:saramji_cv/features/about/presentation/web/widgets/marker.dart';
+import 'package:saramji_cv/features/about/presentation/web/widgets/marker_skill_web.dart';
+import 'package:saramji_cv/features/about/presentation/widgets/marker.dart';
 
 class AboutSlideContant extends StatelessWidget {
   final String summary;
@@ -36,33 +37,33 @@ class AboutSlideContant extends StatelessWidget {
 
                   children: [
                     Marker(
-                      child: MarkerContant(
+                      child: MarkerSkillWeb(
                         text: "Mobile Development",
                         image: "assets/icons/phone.png",
                       ),
                     ),
                     Marker(
-                      child: MarkerContant(
+                      child: MarkerSkillWeb(
                         text: "Paletform Development",
                         image: "assets/icons/code.png",
                       ),
                     ),
 
                     Marker(
-                      child: MarkerContant(
+                      child: MarkerSkillWeb(
                         text: "Backend & Database",
                         image: "assets/icons/db.png",
                       ),
                     ),
                     Marker(
-                      child: MarkerContant(
+                      child: MarkerSkillWeb(
                         text: "Clean Architecture",
                         image: "assets/icons/arch.png",
                       ),
                     ),
 
                     Marker(
-                      child: MarkerContant(
+                      child: MarkerSkillWeb(
                         text: "DevOps & Tools",
                         image: "assets/icons/connect.png",
                       ),

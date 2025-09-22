@@ -43,8 +43,8 @@ List<Project> projects = [
     description:
         "Saramji Protfolio is a responsive and dynamic portfolio website built with Flutter , showcasing a collection of my projects and skills.",
     links: [
-      "https://github.com/elsaramji/store-hup",
-      "https://appetize.io/app/b_444qr5jr4x3bywkg2agvrfx2qi?device=pixel7&osVersion=13.0&toolbar=true",
+      "https://github.com/elsaramji/saramji_cv",
+      "https://elsaramji.github.io/saramji_portfolio/",
     ],
     technologies: [
       "Flutter",

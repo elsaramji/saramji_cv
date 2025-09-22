@@ -3,11 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saramji_cv/core/helper/values/personal_values.dart';
 import 'package:saramji_cv/core/themes/colors/app_colors.dart';
 import 'package:saramji_cv/core/themes/fonts/font_style.dart';
-import 'package:saramji_cv/features/home/presentation/web/widgets/profile_image.dart';
+import 'package:saramji_cv/features/contact/presentation/web/views/contact_web.dart';
+import 'package:saramji_cv/features/contact/presentation/web/widgets/get_contact_info_web.dart';
+import 'package:saramji_cv/features/home/presentation/widgets/profile_image.dart';
+import 'package:saramji_cv/features/home/presentation/widgets/profile_navgation_file.dart';
+import 'package:saramji_cv/features/projects/presentation/web/views/projects_web.dart';
+import 'package:saramji_cv/shared/presentation/functions/goto_slide.dart';
 
-class ProfileSlide extends StatelessWidget {
+class ProfileSlideWeb extends StatelessWidget {
   final PageController controller;
-  const ProfileSlide({super.key, required this.controller});
+  const ProfileSlideWeb({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -46,29 +51,17 @@ class ProfileSlide extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 16.h),
-              Row(
-                spacing: 16.w,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      controller.animateToPage(
-                        3,
-                        duration: Duration(seconds: 1),
-                        curve: Curves.easeIn,
-                      );
-                    },
-                    child: Text("View Projects"),
-                  ),
-                  OutlinedButton(
-                    onPressed: () {
-                      controller.jumpToPage(5);
-                    },
-                    child: Text("Get In Touch"),
-                  ),
-                ],
+              ProfileNavgtionButton(
+                controller: controller,
+                getInTouch: () {
+                  gotoslide(ContactWeb.index, controller);
+                },
+                viewProjects: () {
+                  gotoslide(ProjectsWeb.index, controller);
+                },
               ),
               SizedBox(height: 16.h),
+              GetContactInfoWeb(),
             ],
           ),
         ),

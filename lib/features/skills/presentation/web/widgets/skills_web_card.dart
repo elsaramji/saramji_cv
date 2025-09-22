@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:saramji_cv/core/themes/colors/app_colors.dart';
-import 'package:saramji_cv/features/skills/presentation/web/widgets/skills_web_slied.dart' show SkillsSlide;
+import 'package:saramji_cv/features/skills/presentation/web/widgets/skills_web_slied.dart'
+    show SkillsSlide;
 
 class SkillsWebCard extends StatelessWidget {
   final String title;
@@ -22,6 +22,7 @@ class SkillsWebCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
+      margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w),
       width: 258.w,
       height: 258.h,
       decoration: BoxDecoration(

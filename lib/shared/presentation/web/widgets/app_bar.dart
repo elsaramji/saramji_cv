@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:saramji_cv/core/helper/values/personal_values.dart';
-import 'package:saramji_cv/core/themes/colors/app_colors.dart';
-import 'package:saramji_cv/core/themes/fonts/font_style.dart';
 import 'package:saramji_cv/features/about/presentation/web/view/about_web.dart';
 import 'package:saramji_cv/features/contact/presentation/web/views/contact_web.dart';
 import 'package:saramji_cv/features/experiences/presentation/web/views/experiences_web.dart';
 import 'package:saramji_cv/features/projects/presentation/web/views/projects_web.dart';
 import 'package:saramji_cv/features/skills/presentation/web/views/skills_web.dart';
 import 'package:saramji_cv/shared/presentation/functions/goto_slide.dart';
+import 'package:saramji_cv/shared/presentation/widgets/app_bar_action.dart';
+import 'package:saramji_cv/shared/presentation/widgets/brand_title.dart';
 
 class AppBarWeb extends StatelessWidget implements PreferredSizeWidget {
   final PageController pageController;
@@ -24,12 +23,7 @@ class AppBarWeb extends StatelessWidget implements PreferredSizeWidget {
           onTap: () {
             gotoslide(0, pageController);
           },
-          child: Text(
-            PersonalValues.barndName,
-            style: AppTextStyles.poppinsBold20.copyWith(
-              color: AppColors.primary,
-            ),
-          ),
+          child: BarndTitle(),
         ),
       ),
 
@@ -77,21 +71,4 @@ class AppBarWeb extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => Size.fromHeight(42.h);
 }
 
-class AppBarAction extends StatelessWidget {
-  final String title;
-  final VoidCallback? onPressed;
-  const AppBarAction({super.key, required this.title, this.onPressed});
 
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      child: Text(
-        title,
-        style: AppTextStyles.poppinsRegular14.copyWith(
-          color: AppColors.secondaryText,
-        ),
-      ),
-    );
-  }
-}
